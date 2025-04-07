@@ -21,8 +21,9 @@ export default function FormSection() {
     setIsLoading(true);
 
     const sanitizedMobile = formData.mobile.replace(/\D/g, "");
+    const serviceToInt = parseInt(formData.service_id);
 
-    const payload = { ...formData, mobile: sanitizedMobile };
+    const payload = { ...formData, mobile: sanitizedMobile, service_id: serviceToInt };
 
     try {
       const response = await fetch("https://aliice.space/api/leads", {
