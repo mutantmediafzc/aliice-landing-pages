@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.pipeline {
+  width: 2px;
+  height: 100px;
+  background-color: #ccc;
+  transform: rotate(13deg);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+.links-div-home-page {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+
+.links-div-home-page a {
+  border: 2px solid #252525;
+  padding: 7px 30px;
+  border-radius: 50px;
+  color: #252525;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+.links-div-home-page-a {
+  border: 2px solid #252525;
+  padding: 7px 30px;
+  border-radius: 50px;
+  color: #252525;
+}
+
+
+.span-home-underline {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  margin: 0 0 0 10px;
+}
+
+
+.note-div-home {
+  background: #F4F2F0;
+  padding: 20px;
+  border-radius: 0 20px;
+}
+
+.note-div-home p {
+  margin: 0 !important;
+  color: black;
+}
+
+.note-div-home span {
+  font-weight: bold;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 130px 20px;
+  position: relative;
+}
+
+.info-text {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+  text-align: start;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.button {
+  padding: 10px 20px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.galerie-title {
+  position: absolute;
+  left: -136px;
+  top: 27%;
+  font-size: 100px;
+  rotate: -90deg
+}
+
+
+.cs_color_bg {
+  background-color: #2c2c2c;
 }
