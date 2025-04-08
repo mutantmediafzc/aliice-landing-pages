@@ -1,10 +1,17 @@
 export default function ContactSection() {
   return (
-    <section className="cs_about cs_style_1" id="about">
+    <section
+      className="cs_about cs_style_1
+    max-custom-sm:!px-[26px]"
+      id="about"
+    >
       <div className="cs_height_120 cs_height_lg_80" />
       <div className="cs_height_120 cs_height_lg_80" />
       <div className="container">
-        <div className="row cs_gap_y_40 ">
+        <div
+          className="row cs_gap_y_40 
+        max-custom-sm:!flex max-custom-sm:!flex-col-reverse"
+        >
           <div className="col-lg-5">
             <div className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft">
               <img src="/assets/images/image-five.jpg" alt="About Thumb" />
@@ -12,13 +19,22 @@ export default function ContactSection() {
           </div>
           <div className="col-lg-7 cs_pl_30">
             <div className="cs_section_heading cs_style_1">
-              <h3 className="cs_section_title_up cs_accent_color_v4 cs_semibold cs_fs_24">
+              <h3
+                className="cs_section_title_up cs_accent_color_v4 cs_semibold cs_fs_24
+              max-custom-sm:!text-[44px]"
+              >
                 Top 10 in Switzerland
               </h3>
-              <h2 className="cs_section_title cs_semibold cs_fs_45 mb-0">
+              <h2
+                className="cs_section_title cs_semibold cs_fs_45 mb-0
+              max-custom-sm:!text-[26px]"
+              >
                 . 2000+ successful cases
               </h2>
-              <h2 className="cs_section_title cs_semibold cs_fs_45 mb-0">
+              <h2
+                className="cs_section_title cs_semibold cs_fs_45 mb-0
+              max-custom-sm:!text-[26px]"
+              >
                 . Private operating block
               </h2>
             </div>
@@ -49,7 +65,11 @@ export default function ContactSection() {
             >
               To schedule an appointment, please click on the link below
             </p>
-            <a href="#service" className="links-div-home-page-a">
+            <a
+              href="#service"
+              className="links-div-home-page-a
+            max-custom-sm:!w-full max-custom-sm:!block max-custom-sm:!max-w-none"
+            >
               Online Booking
             </a>
             <p
@@ -62,19 +82,19 @@ export default function ContactSection() {
               <div className="call-us-flex">
                 <p className="cs_about_text cs_type_2 call-us">Geneva</p>
                 <p className="cs_about_text cs_type_2 span-home-underline call-us-big">
-                <a href="tel:+41227322223">+41 22 732 22 23</a>
+                  <a href="tel:+41227322223">+41 22 732 22 23</a>
                 </p>
               </div>
               <div className="call-us-flex">
                 <p className="cs_about_text cs_type_2 call-us">Gstaad</p>
                 <p className="cs_about_text cs_type_2 span-home-underline call-us-big">
-                <a href="tel:+41791969869">+41 79 196 98 69</a>
+                  <a href="tel:+41791969869">+41 79 196 98 69</a>
                 </p>
               </div>
               <div className="call-us-flex">
                 <p className="cs_about_text cs_type_2 call-us">Montreux </p>
                 <p className="cs_about_text cs_type_2 span-home-underline call-us-big">
-                <a href="tel:+41799089898">+41 79 908 98 98</a>
+                  <a href="tel:+41799089898">+41 79 908 98 98</a>
                 </p>
               </div>
             </div>
@@ -91,7 +111,8 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-      <div className="cs_height_120 cs_height_lg_80" />
+      <div className="cs_height_120 cs_height_lg_80
+      max-custom-sm:!hidden" />
     </section>
   );
 }

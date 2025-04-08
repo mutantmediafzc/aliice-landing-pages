@@ -7,6 +7,7 @@ import Header from "./_components/header";
 import HeroSection from "./_components/hero-section";
 import HowToBookSection from "./_components/how-to-book-section";
 import SwiperSection from "./_components/swiper-section";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -20,6 +21,11 @@ export default function Home() {
       <HowToBookSection />
       <ContactSection />
       <Footer />
+      <Script
+        src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+        strategy="afterInteractive"
+      />
+      <Script src="/assets/js/animation.js" strategy="afterInteractive" />
     </>
   );
 }

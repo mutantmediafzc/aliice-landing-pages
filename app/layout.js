@@ -53,10 +53,6 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
         />
         <Script
-          src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-          strategy="afterInteractive"
-        />
-        <Script
           src="/assets/js/jquery-3.6.0.min.js"
           strategy="afterInteractive"
         />
@@ -91,7 +87,6 @@ export default function RootLayout({ children }) {
           src="/assets/js/fetch-services.js"
           strategy="afterInteractive"
         />
-        <Script src="/assets/js/animation.js" strategy="afterInteractive" />
       </body>
     </html>
   );

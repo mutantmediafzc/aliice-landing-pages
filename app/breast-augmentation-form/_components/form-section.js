@@ -126,7 +126,11 @@ export default function FormSection() {
   }
 
   return (
-    <section className="cs_bg_filed" id="contact">
+    <section
+      className="cs_bg_filed
+    max-custom-sm:!px-3.5"
+      id="contact"
+    >
       <div className="cs_height_120 cs_height_lg_80" />
       <div className="container">
         <div className="row">
@@ -135,16 +139,26 @@ export default function FormSection() {
               id="form-a"
               className="cs_appointment_wrap cs_type_2 wow fadeInLeft"
             >
-              <h3 className="cs_appointment_title_up cs_accent_color_v4 cs_medium cs_fs_24">
+              <h3
+                className="cs_appointment_title_up cs_accent_color_v4 cs_medium cs_fs_24
+              max-custom-sm:!text-[44px]"
+              >
                 Price list and consultation booking
               </h3>
-              <h2 className="cs_appointment_title cs_bold cs_fs_45 mb-0">
+              <h2
+                className="cs_appointment_title cs_bold cs_fs_45 mb-0
+              max-custom-sm:!text-[20px]"
+              >
                 To schedule a FREE CONSULTATION or receive our detailed PRICE
                 LIST by email, <br /> complete the form.
               </h2>
               <form id="cs_form" ref={formRef} onSubmit={handleSubmit}>
-                <div className="form-flex-row">
-                  <div className="form-input flex-col position-relative">
+                <div
+                  className="form-flex-row
+                max-custom-sm:!flex-col"
+                >
+                  <div className="form-input flex-col position-relative
+                  max-custom-sm:!max-w-none">
                     <label htmlFor="fname">First Name*</label>
                     <input
                       style={{
@@ -152,11 +166,13 @@ export default function FormSection() {
                       }}
                       type="text"
                       name="fname"
-                      className="form-input"
+                      className="form-input
+                      max-custom-sm:!max-w-none"
                     />
                     {errors.fname && <p id="email-error">{errors.fname}</p>}
                   </div>
-                  <div className="form-input flex-col position-relative">
+                  <div className="form-input flex-col position-relative
+                  max-custom-sm:!max-w-none">
                     <label htmlFor="lname">Last Name*</label>
                     <input
                       style={{
@@ -164,13 +180,18 @@ export default function FormSection() {
                       }}
                       type="text"
                       name="lname"
-                      className="form-input"
+                      className="form-input
+                      max-custom-sm:!max-w-none"
                     />
                     {errors.lname && <p id="email-error">{errors.lname}</p>}
                   </div>
                 </div>
-                <div className="form-flex-row">
-                  <div className="form-input flex-col position-relative">
+                <div
+                  className="form-flex-row
+                max-custom-sm:!flex-col"
+                >
+                  <div className="form-input flex-col position-relative
+                  max-custom-sm:!max-w-none">
                     <label htmlFor="email">Email*</label>
                     <input
                       style={{
@@ -179,14 +200,16 @@ export default function FormSection() {
                       id="email"
                       type="text"
                       name="email"
-                      className="form-input"
+                      className="form-input
+                      max-custom-sm:!max-w-none"
                     />
                     {errors.email && <p id="email-error">{errors.email}</p>}
                   </div>
-                  <div className="form-input flex-col position-relative">
+                  <div className="form-input flex-col position-relative
+                  max-custom-sm:!max-w-none">
                     <label htmlFor="phone">Phone number*</label>
                     <div style={{ display: "flex" }}>
-                      <select id="country-selector">
+                      <select style={{maxWidth: "150px"}} id="country-selector">
                         <option value="" defaultValue="+971" />
                       </select>
                       <input
@@ -196,14 +219,17 @@ export default function FormSection() {
                         type="tel"
                         id="phone"
                         name="phone"
-                        className="form-input"
+                        className="form-input
+                        max-custom-sm:!max-w-none"
                       />
                       {errors.phone && <p id="email-error">{errors.phone}</p>}
                     </div>
                   </div>
                 </div>
-                <div className="form-flex-row">
-                  <div className="form-input flex-col position-relative">
+                <div className="form-flex-row
+                max-custom-sm:!flex-col">
+                  <div className="form-input flex-col position-relative
+                  max-custom-sm:!max-w-none">
                     <label>I'm interested in the following service:*</label>
                     <select
                       style={{
@@ -211,6 +237,7 @@ export default function FormSection() {
                       }}
                       id="service-selector"
                       name="service-selector"
+                      className="max-custom-sm:!max-w-none"
                     >
                       <option value="" disabled="" defaultValue="">
                         Please Select
@@ -220,7 +247,8 @@ export default function FormSection() {
                       <p id="email-error">{errors.serviceSelector}</p>
                     )}
                   </div>
-                  <div className="form-input flex-col position-relative">
+                  <div className="form-input flex-col position-relative
+                  max-custom-sm:!max-w-none">
                     <label>My preferred location is:*</label>
                     <select
                       style={{
@@ -230,6 +258,7 @@ export default function FormSection() {
                       }}
                       id="location-selector"
                       name="location-selector"
+                      className="max-custom-sm:!max-w-none"
                     >
                       <option value="" disabled="" defaultValue="">
                         Please Select
@@ -280,7 +309,8 @@ export default function FormSection() {
                     type="submit"
                     id="submit-btn"
                     disabled={isLoading}
-                    className="cs_btn cs_style_1 cs_radius_2 cs_size_md cs_accent_bg_v4 cs_white_color cs_fs_18 cs_semibold"
+                    className="cs_btn cs_style_1 cs_radius_2 cs_size_md cs_accent_bg_v4 cs_white_color cs_fs_18 cs_semibold
+                    max-custom-sm:!w-full"
                   >
                     {isLoading ? "Submitting..." : "CONFIRM"}
                   </button>

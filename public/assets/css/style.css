@@ -11380,6 +11380,15 @@ body > div.gallery-container > div.swiper.swiper-initialized.swiper-horizontal.s
 	color: red;
 }
 
+body > footer > div.hidden.mt-5.max-custom-xs\:block > div > div:nth-child(9) > h5 {
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  font-family: "IvyModeReg", sans-serif !important;
+  font-size: 24px;
+  color: #fff !important;
+  margin-bottom: 0px;
+}
+
 
 
 

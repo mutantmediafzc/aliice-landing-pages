@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --color-custom-yellow: #bf9410;
+  --breakpoint-custom-sm: 640px;
+}
+
 .pipeline {
   width: 2px;
   height: 100px;

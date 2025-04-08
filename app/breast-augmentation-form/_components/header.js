@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header className="cs_site_header cs_style_1 cs_version_4 cs_sticky_header">
-      <div className="cs_top_header cs_color_bg ">
+      <div className="cs_top_header cs_color_bg">
         <div className="container">
           <div className="cs_top_header_in cs_version_4">
             <div className="cs_top_header_left">
@@ -118,6 +118,23 @@ export default function Header() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style={{ backgroundColor: "#2c2c2c" }}
+        className="cs_main_header cs_accent_bg_v4 cs_color_bg !hidden
+        max-custom-sm:py-!2.5 max-custom-sm:!block"
+      >
+        <div className="container">
+          <div
+            className="cs_main_header_in
+          max-custom-sm:!flex max-custom-sm:!justify-center"
+          >
+            <a className="cs_mobile_logo" href="index.html">
+              <img src="assets/images/logo-aes.svg" alt="Logo" />
+            </a>
           </div>
         </div>
       </div>

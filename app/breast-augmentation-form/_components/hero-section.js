@@ -19,31 +19,40 @@ export default function HeroSection() {
 
   return (
     <div
-      className="cs_hero cs_style_6 cs_accent_v4_light cs_creative_dental cs_color_bg pb-90"
+      className="cs_hero cs_style_6 cs_accent_v4_light cs_creative_dental cs_color_bg pb-90
+      max-custom-sm:!pt-8 max-custom-sm:!pb-0 max-custom-sm:!px-3.5"
       id="home"
       style={{ backgroundColor: "#2c2c2c" }}
     >
       <div className="container">
         <div style={{ position: "relative" }} className="cs_hero_in">
-          <div className="cs_hero_text">
-            <h3 className="cs_hero_mini_title cs_accent_color_v4 cs_fs_24 cs_semibold">
+          <div className="cs_hero_text
+          max-custom-sm:!w-full">
+            <h3 className="cs_hero_mini_title cs_accent_color_v4 cs_fs_24 cs_semibold
+            max-custom-sm:!text-[26px]">
               Free consultation
             </h3>
-            <h1 className="cs_hero_title cs_fs_60 cs_semibold">
+            <h1 className="cs_hero_title cs_fs_60 cs_semibold
+            max-custom-sm:!text-[46px]">
               Breast <br /> Augmentation
             </h1>
-            <p className="cs_hero_subtitle">with 3D simulation</p>
+            <p className="cs_hero_subtitle
+            max-custom-sm:!text-[26px]">
+              with 3D simulation
+            </p>
             <p className="cs_hero_subtitle">in Geneva, Montreux and Gstaad</p>
             <div className="cs_hero_btn_group">
               <a
                 href="#service"
-                className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium"
+                className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium
+                max-custom-sm:!w-full"
               >
                 ONLINE BOOKING
               </a>
             </div>
           </div>
-          <div className="cs_hero_img">
+          <div className="w-full max-w-[830px] cs_hero_img
+          max-custom-sm:!relative max-custom-sm:!top-10">
             <video
               id="heroVideo"
               ref={videoRef}
