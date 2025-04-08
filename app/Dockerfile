@@ -1,21 +1,22 @@
-# Install dependencies only when needed
+# 1. Base image for installing dependencies
 FROM node:20-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 
-# Rebuild the source code only when needed
+# 2. Build the Next.js app
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build
 
-# Production image
+# 3. Final image for running the app
 FROM node:20-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
+ENV PORT 3000
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
