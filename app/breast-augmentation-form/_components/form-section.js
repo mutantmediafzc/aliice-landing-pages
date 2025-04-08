@@ -3,27 +3,85 @@
 import { useRef, useState } from "react";
 
 export default function FormSection() {
-  const [formData, setData] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
-    mobile: "+971",
-    service_id: "",
-    clinic_preference: "",
-    description: "",
-  });
-  const [emailErrorMessage, setEmailErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState({});
   const formRef = useRef(null);
 
   async function handleSubmit(event) {
     event.preventDefault();
     setIsLoading(true);
 
-    const sanitizedMobile = formData.mobile.replace(/\D/g, "");
-    const serviceToInt = parseInt(formData.service_id);
+    const formData = new FormData(event.target);
 
-    const payload = { ...formData, mobile: sanitizedMobile, service_id: serviceToInt };
+    const validationErrors = {};
+
+    const fname = formData.get("fname");
+    if (!fname || fname.trim() === "") {
+      validationErrors.fname = "First name is required!";
+    }
+
+    const lname = formData.get("lname");
+    if (!lname || lname.trim() === "") {
+      validationErrors.lname = "Last name is required!";
+    }
+
+    const email = formData.get("email");
+    if (
+      !email ||
+      email.trim() === "" ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    ) {
+      validationErrors.email = "Please enter a valid email address";
+    }
+
+    const phone = formData.get("phone");
+    const phoneDigitsOnly = phone ? phone.replace(/\D/g, "") : "";
+    if (
+      !phoneDigitsOnly ||
+      phoneDigitsOnly.length < 7 ||
+      phoneDigitsOnly.length > 15
+    ) {
+      validationErrors.phone = "Please enter a valid phone number";
+    }
+
+    const serviceSelector = formData.get("service-selector");
+    if (
+      !serviceSelector ||
+      serviceSelector === "" ||
+      serviceSelector === "-1"
+    ) {
+      validationErrors.serviceSelector =
+        "Please select a service from the dropdown";
+    }
+
+    const locationSelector = formData.get("location-selector");
+    if (
+      !locationSelector ||
+      locationSelector === "" ||
+      locationSelector === "-1"
+    ) {
+      validationErrors.locationSelector =
+        "Please select a location from the dropdown";
+    }
+
+    const message = formData.get("message");
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setIsLoading(false);
+      return;
+    }
+
+    setErrors({});
+    const payload = {
+      first_name: fname,
+      last_name: lname,
+      email: email,
+      mobile: phoneDigitsOnly,
+      service_id: parseInt(serviceSelector),
+      clinic_preference: locationSelector,
+      description: message,
+    };
 
     try {
       const response = await fetch("https://aliice.space/api/leads", {
@@ -38,31 +96,30 @@ export default function FormSection() {
       const data = await response.json();
 
       if (data.success === false && data.errors && data.errors.email) {
-        setEmailErrorMessage(data.errors.email[0]);
+        validationErrors.email = data.errors.email[0];
+        setErrors(validationErrors);
+        setIsLoading(false);
         return;
       }
 
       console.log("Success", data);
-      formRef.current.reset();
-      setEmailErrorMessage("");
-      setData({
-        first_name: "",
-        last_name: "",
-        email: "",
-        mobile: "",
-        service_id: "",
-        clinic_preference: "",
-        description: "",
-      });
-
+      setErrors({});
       Swal.fire({
         icon: "success",
         title: "Success!",
         text: "Your data has been submitted successfully",
         confirmButtonText: "Great!",
       });
+
+      formRef.current.reset();
     } catch (error) {
-      console.log("Error: ", error);
+      console.log("Error", error);
+
+      Swal.fire({
+        icon: "error",
+        title: "Oops!",
+        text: "Something went wrong. Please try again later.",
+      });
     } finally {
       setIsLoading(false);
     }
@@ -90,66 +147,58 @@ export default function FormSection() {
                   <div className="form-input flex-col position-relative">
                     <label htmlFor="fname">First Name*</label>
                     <input
+                      style={{
+                        borderColor: errors.fname ? "red" : "#e1e1e1",
+                      }}
                       type="text"
                       name="fname"
                       className="form-input"
-                      value={formData.first_name}
-                      onChange={(e) =>
-                        setData({ ...formData, first_name: e.target.value })
-                      }
-                      required
                     />
+                    {errors.fname && <p id="email-error">{errors.fname}</p>}
                   </div>
                   <div className="form-input flex-col position-relative">
                     <label htmlFor="lname">Last Name*</label>
                     <input
+                      style={{
+                        borderColor: errors.lname ? "red" : "#e1e1e1",
+                      }}
                       type="text"
                       name="lname"
                       className="form-input"
-                      value={formData.last_name}
-                      onChange={(e) =>
-                        setData({ ...formData, last_name: e.target.value })
-                      }
-                      required
                     />
+                    {errors.lname && <p id="email-error">{errors.lname}</p>}
                   </div>
                 </div>
                 <div className="form-flex-row">
                   <div className="form-input flex-col position-relative">
                     <label htmlFor="email">Email*</label>
                     <input
-                    style={{
-                      borderColor: emailErrorMessage !== "" ? "red" : "#e1e1e1"
-                    }}
+                      style={{
+                        borderColor: errors.email ? "red" : "#e1e1e1",
+                      }}
                       id="email"
-                      type="email"
+                      type="text"
                       name="email"
                       className="form-input"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setData({ ...formData, email: e.target.value })
-                      }
-                      required
                     />
-                    <p id="email-error">{emailErrorMessage}</p>
+                    {errors.email && <p id="email-error">{errors.email}</p>}
                   </div>
                   <div className="form-input flex-col position-relative">
                     <label htmlFor="phone">Phone number*</label>
                     <div style={{ display: "flex" }}>
-                      <select id="country-selector" required>
-                        <option value="" defaultValue="" />
+                      <select id="country-selector">
+                        <option value="" defaultValue="+971" />
                       </select>
                       <input
+                        style={{
+                          borderColor: errors.phone ? "red" : "#e1e1e1",
+                        }}
                         type="tel"
                         id="phone"
                         name="phone"
                         className="form-input"
-                        value={formData.mobile}
-                        onChange={(e) =>
-                          setData({ ...formData, mobile: e.target.value })
-                        }
-                        required
                       />
+                      {errors.phone && <p id="email-error">{errors.phone}</p>}
                     </div>
                   </div>
                 </div>
@@ -157,32 +206,30 @@ export default function FormSection() {
                   <div className="form-input flex-col position-relative">
                     <label>I'm interested in the following service:*</label>
                     <select
+                      style={{
+                        borderColor: errors.serviceSelector ? "red" : "#e1e1e1",
+                      }}
                       id="service-selector"
                       name="service-selector"
-                      value={formData.service_id}
-                      onChange={(e) =>
-                        setData({ ...formData, service_id: e.target.value })
-                      }
-                      required
                     >
                       <option value="" disabled="" defaultValue="">
                         Please Select
                       </option>
                     </select>
+                    {errors.serviceSelector && (
+                      <p id="email-error">{errors.serviceSelector}</p>
+                    )}
                   </div>
                   <div className="form-input flex-col position-relative">
                     <label>My preferred location is:*</label>
                     <select
+                      style={{
+                        borderColor: errors.locationSelector
+                          ? "red"
+                          : "#e1e1e1",
+                      }}
                       id="location-selector"
                       name="location-selector"
-                      value={formData.clinic_preference}
-                      onChange={(e) =>
-                        setData({
-                          ...formData,
-                          clinic_preference: e.target.value,
-                        })
-                      }
-                      required
                     >
                       <option value="" disabled="" defaultValue="">
                         Please Select
@@ -191,6 +238,9 @@ export default function FormSection() {
                       <option value="gstaad">Gstaad</option>
                       <option value="montreux">Montreux</option>
                     </select>
+                    {errors.locationSelector && (
+                      <p id="email-error">{errors.locationSelector}</p>
+                    )}
                   </div>
                 </div>
                 <div>
@@ -209,14 +259,7 @@ export default function FormSection() {
                     If you have any further questions, please feel free to ask
                     them here!
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.description}
-                    onChange={(e) =>
-                      setData({ ...formData, description: e.target.value })
-                    }
-                  />
+                  <textarea id="message" name="message" />
                 </div>
                 <div>
                   <p>
