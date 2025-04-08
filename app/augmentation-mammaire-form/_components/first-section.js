@@ -35,7 +35,7 @@ export default function FirstSection() {
               — Posez toutes vos questions
             </p>
             <p className="cs_about_text cs_type_2">
-              À la fin de la consultation, nous vous fournirons un
+              À la fin de la consultation, nous vous fournirons un {" "}
               <span style={{ fontWeight: "bold" }}>
                 devis personnel qui détaille les coûts de votre projet
               </span>
@@ -53,7 +53,7 @@ export default function FirstSection() {
               >
                 <a
                   href="#service"
-                  className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium"
+                  className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium uppercase"
                 >
                   Réservation
                 </a>
