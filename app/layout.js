@@ -3,7 +3,6 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Aesthetics - Plastic Surgery & Aesthetic Medicine",
-  description: "TODO: PUT DESCRIPTION",
 };
 
 export default function RootLayout({ children }) {
