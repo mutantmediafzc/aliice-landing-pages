@@ -9,8 +9,7 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-# need to replace this in the future, RUN npm run build
-RUN NEXT_DISABLE_ESLINT=true npm run build
+RUN npm run build
 
 # 3. Final image for running the app
 FROM node:20-alpine AS runner
