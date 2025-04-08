@@ -108,7 +108,7 @@ export default function Header() {
                         Emergency No
                       </h3>
                       <a
-                        href="tel:41227322223"
+                        href="tel:+41227322223"
                         className="cs_iconbox_subtitle cs_primary_color mb-0"
                       >
                         +41 22 732 22 23
