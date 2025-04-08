@@ -91,6 +91,7 @@ export default function RootLayout({ children }) {
           src="/assets/js/fetch-services.js"
           strategy="afterInteractive"
         />
+        <Script src="/assets/js/animation.js" strategy="afterInteractive" />
       </body>
     </html>
   );
