@@ -125,7 +125,7 @@ export default function Header() {
       <div
         style={{ backgroundColor: "#2c2c2c" }}
         className="cs_main_header cs_accent_bg_v4 cs_color_bg !hidden
-        max-custom-sm:py-!2.5 max-custom-sm:!block"
+        max-custom-md:py-!2.5 max-custom-md:!block"
       >
         <div className="container">
           <div

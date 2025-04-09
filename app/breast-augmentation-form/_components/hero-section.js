@@ -24,20 +24,22 @@ export default function HeroSection() {
       id="home"
       style={{ backgroundColor: "#2c2c2c" }}
     >
-      <div className="container">
-        <div style={{ position: "relative" }} className="cs_hero_in">
+      <div className="container
+      max-custom-md:!max-w-none">
+        <div style={{ position: "relative" }} className="cs_hero_in
+        max-custom-md:!flex max-custom-md:!flex-row max-custom-sm:!flex-col">
           <div className="cs_hero_text
-          max-custom-sm:!w-full">
+          max-custom-md:!w-full">
             <h3 className="cs_hero_mini_title cs_accent_color_v4 cs_fs_24 cs_semibold
-            max-custom-sm:!text-[26px]">
+            max-custom-md:!text-[26px]">
               Free consultation
             </h3>
             <h1 className="cs_hero_title cs_fs_60 cs_semibold
-            max-custom-sm:!text-[46px]">
-              Breast <br /> Augmentation
+            max-custom-md:!text-[46px]">
+              Breast <br className="max-custom-md:!block" /> Augmentation
             </h1>
             <p className="cs_hero_subtitle
-            max-custom-sm:!text-[26px]">
+            max-custom-md:!text-[26px]">
               with 3D simulation
             </p>
             <p className="cs_hero_subtitle">in Geneva, Montreux and Gstaad</p>
@@ -52,7 +54,8 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="w-full max-w-[830px] cs_hero_img
-          max-custom-sm:!relative max-custom-sm:!top-10">
+          max-custom-sm:!relative max-custom-sm:!top-10 max-custom-sm:!max-w-none
+          max-custom-md:!max-w-[414px]">
             <video
               id="heroVideo"
               ref={videoRef}

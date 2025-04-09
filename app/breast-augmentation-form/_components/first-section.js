@@ -3,27 +3,31 @@ export default function FirstSection() {
     <section
       style={{ background: "#f3f2f0", position: "relative" }}
       className="cs_about cs_style_1
-      max-custom-sm:!px-[26px]"
+      max-custom-sm:!px-[26px]
+      max-custom-md:!px-[12px]"
       id="about"
     >
       <div className="cs_height_120 cs_height_lg_80" />
       <div className="cs_height_120 cs_height_lg_80" />
-      <div className="container">
+      <div className="container
+      max-custom-md:!max-w-none">
         <div className="row cs_gap_y_40 
-        max-custom-sm:!flex max-custom-sm:!flex-col-reverse max-custom-sm:!mt-8">
-          <div className="col-lg-5">
-            <div className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft">
+        max-custom-sm:!flex max-custom-md:!flex-col-reverse max-custom-sm:!mt-8">
+          <div className="col-lg-5
+          max-custom-md:!flex max-custom-md:!justify-center">
+            <div className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
+            max-custom-md:!max-w-[436px]">
               <img src="/assets/images/image-one.jpg" alt="About Thumb" />
             </div>
           </div>
           <div className="col-lg-7 cs_pl_30">
             <div className="cs_section_heading cs_style_1">
               <h3 className="cs_section_title_up cs_accent_color_v4 cs_semibold cs_fs_24
-              max-custom-sm:!text-[44px]">
+              max-custom-md:!text-[44px]">
                 Visit Aesthetics Clinic for a free consultation
               </h3>
               <h2 className="cs_section_title cs_semibold cs_fs_45 mb-0
-              max-custom-sm:!text-[26px]">
+              max-custom-md:!text-[26px]">
                 and find out what is feasible!
               </h2>
             </div>

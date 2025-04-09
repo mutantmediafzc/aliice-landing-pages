@@ -2,18 +2,19 @@ export default function Footer() {
   return (
     <footer
       className="cs_footer cs_style_1 cs_primary_bg overflow-hidden position-relative
-    max-custom-sm:!px-3.5"
+    max-custom-sm:!px-3.5
+    max-custom-md:!px-[12px]"
     >
       <div
         className="footer-flex
-      max-custom-sm:!flex-col max-custom-sm:!pt-0"
+      max-custom-md:!flex-col max-custom-md:!pt-0 max-custom-md:!max-w-[550px] max-custom-md:!mx-auto"
       >
         {/* 1st */}
         <div>
-          <h1 className="max-custom-sm:!text-[26px]">
+          <h1 className="max-custom-md:!text-[26px]">
             We deliver excellence through tailor-made solutions.
           </h1>
-          <h4 className="max-custom-sm:!text-[20px]">
+          <h4 className="max-custom-md:!text-[20px]">
             AESTHETICS CLINIC PROVIDES
           </h4>
           <ul>
@@ -28,7 +29,7 @@ export default function Footer() {
         {/* 2nd */}
         <div
           className="location-width 
-        max-custom-sm:!hidden"
+        max-custom-md:!hidden"
         >
           <i
             style={{ color: "#868686", fontSize: 10 }}
@@ -82,7 +83,7 @@ export default function Footer() {
         {/* 3rd */}
         <div
           className="location-width
-        max-custom-sm:!hidden"
+        max-custom-md:!hidden"
         >
           <i
             style={{ color: "#868686", fontSize: 10 }}
@@ -107,7 +108,7 @@ export default function Footer() {
         {/* 4th */}
         <div
           className="location-width
-        max-custom-sm:!hidden"
+        max-custom-md:!hidden"
         >
           <i
             style={{ color: "#868686", fontSize: 10 }}
@@ -132,7 +133,8 @@ export default function Footer() {
       </div>
       <div
         className="hidden
-      max-custom-sm:!flex max-custom-sm:!justify-between max-custom-sm:!items-start"
+      max-custom-md:!flex max-custom-md:!justify-between max-custom-md:!items-start
+      max-custom-md:!max-w-[550px] max-custom-md:!mx-auto"
       >
         {/* 3rd */}
         <div className="location-width">
@@ -181,7 +183,7 @@ export default function Footer() {
       </div>
       <div
         className="hidden mt-5
-        max-custom-sm:block"
+        max-custom-md:block max-custom-md:!max-w-[550px] max-custom-md:!mx-auto"
       >
         <div className="location-width">
           <i
@@ -239,18 +241,18 @@ export default function Footer() {
       <div className="cs_footer_bottom cs_version_4">
         <div className="container">
           <div className="cs_footer_bottom_text
-          max-custom-sm:!flex max-custom-sm:!justify-center">
+          max-custom-md:!flex max-custom-md:!justify-center">
             <div className="cs-copyright cs_fs_18 cs_white_color
-            max-custom-sm:!text-[10px]">
+            max-custom-md:!text-[10px]">
               All Right Reserved Copyright © {new Date().getFullYear()}
             </div>
             <ul className="cs_footer_links cs_version_4 cs_mp0  cs_fs_18 cs_white_color
-            max-custom-sm:!flex max-custom-sm:!justify-center max-custom-sm:!items-center max-custom-sm:!w-full">
+            max-custom-md:!flex max-custom-md:!justify-center max-custom-md:!items-center max-custom-md:!w-full">
               <li>
-                <a className="max-custom-sm:!text-[10px] hover:!text-custom-yellow" href="#">Privacy Policy</a>
+                <a className="max-custom-md:!text-[10px] hover:!text-custom-yellow" href="#">Privacy Policy</a>
               </li>
               <li>
-                <a className="max-custom-sm:!text-[10px] hover:!text-custom-yellow" href="#">Terms &amp; Conditions</a>
+                <a className="max-custom-md:!text-[10px] hover:!text-custom-yellow" href="#">Terms &amp; Conditions</a>
               </li>
             </ul>
           </div>

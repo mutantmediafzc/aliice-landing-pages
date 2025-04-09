@@ -128,11 +128,13 @@ export default function FormSection() {
   return (
     <section
       className="cs_bg_filed
-    max-custom-sm:!px-3.5"
+    max-custom-sm:!px-3.5
+    max-custom-md:!px-[12px]"
       id="contact"
     >
       <div className="cs_height_120 cs_height_lg_80" />
-      <div className="container">
+      <div className="container
+      max-custom-md:!max-w-none">
         <div className="row">
           <div className="col-lg-10">
             <div
@@ -141,13 +143,13 @@ export default function FormSection() {
             >
               <h3
                 className="cs_appointment_title_up cs_accent_color_v4 cs_medium cs_fs_24
-              max-custom-sm:!text-[44px]"
+              max-custom-md:!text-[44px]"
               >
                 Price list and consultation booking
               </h3>
               <h2
                 className="cs_appointment_title cs_bold cs_fs_45 mb-0
-              max-custom-sm:!text-[20px]"
+              max-custom-md:!text-[20px]"
               >
                 To schedule a FREE CONSULTATION or receive our detailed PRICE
                 LIST by email, <br /> complete the form.
@@ -155,10 +157,10 @@ export default function FormSection() {
               <form id="cs_form" ref={formRef} onSubmit={handleSubmit}>
                 <div
                   className="form-flex-row
-                max-custom-sm:!flex-col"
+                max-custom-md:!flex-col"
                 >
                   <div className="form-input flex-col position-relative
-                  max-custom-sm:!max-w-none">
+                  max-custom-md:!max-w-none">
                     <label htmlFor="fname">First Name*</label>
                     <input
                       style={{
@@ -167,12 +169,12 @@ export default function FormSection() {
                       type="text"
                       name="fname"
                       className="form-input
-                      max-custom-sm:!max-w-none"
+                      max-custom-md:!max-w-none"
                     />
                     {errors.fname && <p id="email-error">{errors.fname}</p>}
                   </div>
                   <div className="form-input flex-col position-relative
-                  max-custom-sm:!max-w-none">
+                  max-custom-md:!max-w-none">
                     <label htmlFor="lname">Last Name*</label>
                     <input
                       style={{
@@ -181,17 +183,17 @@ export default function FormSection() {
                       type="text"
                       name="lname"
                       className="form-input
-                      max-custom-sm:!max-w-none"
+                      max-custom-md:!max-w-none"
                     />
                     {errors.lname && <p id="email-error">{errors.lname}</p>}
                   </div>
                 </div>
                 <div
                   className="form-flex-row
-                max-custom-sm:!flex-col"
+                max-custom-md:!flex-col"
                 >
                   <div className="form-input flex-col position-relative
-                  max-custom-sm:!max-w-none">
+                  max-custom-md:!max-w-none">
                     <label htmlFor="email">Email*</label>
                     <input
                       style={{
@@ -201,12 +203,12 @@ export default function FormSection() {
                       type="text"
                       name="email"
                       className="form-input
-                      max-custom-sm:!max-w-none"
+                      max-custom-md:!max-w-none"
                     />
                     {errors.email && <p id="email-error">{errors.email}</p>}
                   </div>
                   <div className="form-input flex-col position-relative
-                  max-custom-sm:!max-w-none">
+                  max-custom-md:!max-w-none">
                     <label htmlFor="phone">Phone number*</label>
                     <div style={{ display: "flex" }}>
                       <select style={{maxWidth: "150px"}} id="country-selector">
@@ -220,16 +222,16 @@ export default function FormSection() {
                         id="phone"
                         name="phone"
                         className="form-input
-                        max-custom-sm:!max-w-none"
+                        max-custom-md:!max-w-none"
                       />
                       {errors.phone && <p id="email-error">{errors.phone}</p>}
                     </div>
                   </div>
                 </div>
                 <div className="form-flex-row
-                max-custom-sm:!flex-col">
+                max-custom-md:!flex-col">
                   <div className="form-input flex-col position-relative
-                  max-custom-sm:!max-w-none">
+                  max-custom-md:!max-w-none">
                     <label>I'm interested in the following service:*</label>
                     <select
                       style={{
@@ -237,7 +239,7 @@ export default function FormSection() {
                       }}
                       id="service-selector"
                       name="service-selector"
-                      className="max-custom-sm:!max-w-none"
+                      className="max-custom-md:!max-w-none"
                     >
                       <option value="" disabled="" defaultValue="">
                         Please Select
@@ -248,7 +250,7 @@ export default function FormSection() {
                     )}
                   </div>
                   <div className="form-input flex-col position-relative
-                  max-custom-sm:!max-w-none">
+                  max-custom-md:!max-w-none">
                     <label>My preferred location is:*</label>
                     <select
                       style={{
@@ -258,7 +260,7 @@ export default function FormSection() {
                       }}
                       id="location-selector"
                       name="location-selector"
-                      className="max-custom-sm:!max-w-none"
+                      className="max-custom-md:!max-w-none"
                     >
                       <option value="" disabled="" defaultValue="">
                         Please Select

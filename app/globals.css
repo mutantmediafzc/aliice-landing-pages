@@ -3,6 +3,7 @@
 @theme {
   --color-custom-yellow: #bf9410;
   --breakpoint-custom-sm: 640px;
+  --breakpoint-custom-md: 768px;
 }
 
 .pipeline {
