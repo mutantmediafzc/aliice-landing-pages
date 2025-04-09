@@ -2,6 +2,7 @@
 
 @theme {
   --color-custom-yellow: #bf9410;
+  --color-custom-white: #f3f2f0;
   --breakpoint-custom-sm: 640px;
   --breakpoint-custom-md: 770px;
   --breakpoint-custom-lg: 1200px;
