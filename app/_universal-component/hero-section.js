@@ -66,7 +66,7 @@ export default function HeroSection({
             <div className="cs_hero_btn_group">
               <a
                 href="#service"
-                className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium
+                className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium uppercase
                 max-custom-sm:!w-full"
               >
                 {btnText}

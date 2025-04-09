@@ -66,7 +66,7 @@ export default function FirstSection({
               >
                 <a
                   href="#service"
-                  className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium
+                  className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium uppercase
                     max-custom-sm:!w-full"
                 >
                   {btnText}
@@ -85,7 +85,7 @@ export default function FirstSection({
                   </p>
                   <a
                     href="#form-a"
-                    className="links-div-home-page-a
+                    className="links-div-home-page-a uppercase
                     max-custom-sm:!p-0"
                   >
                     {goToFormText}

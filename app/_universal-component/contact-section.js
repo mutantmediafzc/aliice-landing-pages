@@ -75,7 +75,7 @@ export default function ContactSection({
             </p>
             <a
               href="#service"
-              className="links-div-home-page-a
+              className="links-div-home-page-a uppercase
               max-custom-sm:!w-full max-custom-sm:!block max-custom-sm:!max-w-none"
             >
               {btnText}

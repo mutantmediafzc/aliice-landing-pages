@@ -341,7 +341,7 @@ export default function FormSection({
                     type="submit"
                     id="submit-btn"
                     disabled={isLoading}
-                    className="cs_btn cs_style_1 cs_radius_2 cs_size_md cs_accent_bg_v4 cs_white_color cs_fs_18 cs_semibold
+                    className="cs_btn cs_style_1 cs_radius_2 cs_size_md cs_accent_bg_v4 cs_white_color cs_fs_18 cs_semibold uppercase
                     max-custom-sm:!w-full"
                   >
                     {isLoading ? btnSubmittingText : btnText}
