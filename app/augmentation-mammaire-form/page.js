@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ContactSection from "../_universal-component/contact-section";
 import FirstSection from "../_universal-component/first-section";
 import FrFooter from "../_universal-component/footers/fr-footer";
@@ -74,7 +75,7 @@ export default function Home() {
             {" "}
             acceptez les conditions énumérées dans notre{" "}
             <span>
-              <a href="#">politique de confidentialité.</a>
+              <Link href="#">politique de confidentialité.</Link>
             </span>
           </>
         }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import FillersContactSection from "../_universal-component/fillers-contact-section";
 import FirstSection from "../_universal-component/first-section";
 import EnFooter from "../_universal-component/footers/en-footer";
@@ -77,7 +78,7 @@ export default function Home() {
             By clicking on "Confirm", you are agreeing with the terms listed in
             our{" "}
             <span>
-              <a href="#">privacy policy</a>
+              <Link href="#">privacy policy</Link>
             </span>
           </>
         }
