@@ -125,12 +125,12 @@ export default function Header() {
       <div
         style={{ backgroundColor: "#2c2c2c" }}
         className="cs_main_header cs_accent_bg_v4 cs_color_bg !hidden
-        max-custom-md:py-!2.5 max-custom-md:!block"
+        max-custom-md:py-!2.5 max-custom-lg:!block"
       >
         <div className="container">
           <div
             className="cs_main_header_in
-          max-custom-sm:!flex max-custom-sm:!justify-center"
+          max-custom-lg:!flex max-custom-lg:!justify-center"
           >
             <a className="cs_mobile_logo" href="index.html">
               <img src="assets/images/logo-aes.svg" alt="Logo" />

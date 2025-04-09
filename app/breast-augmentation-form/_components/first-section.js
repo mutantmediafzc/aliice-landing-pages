@@ -23,11 +23,11 @@ export default function FirstSection() {
           <div className="col-lg-7 cs_pl_30">
             <div className="cs_section_heading cs_style_1">
               <h3 className="cs_section_title_up cs_accent_color_v4 cs_semibold cs_fs_24
-              max-custom-md:!text-[44px]">
+              max-custom-lg:!text-[44px]">
                 Visit Aesthetics Clinic for a free consultation
               </h3>
               <h2 className="cs_section_title cs_semibold cs_fs_45 mb-0
-              max-custom-md:!text-[26px]">
+              max-custom-lg:!text-[26px]">
                 and find out what is feasible!
               </h2>
             </div>

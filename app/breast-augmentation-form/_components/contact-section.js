@@ -25,19 +25,19 @@ export default function ContactSection() {
             <div className="cs_section_heading cs_style_1">
               <h3
                 className="cs_section_title_up cs_accent_color_v4 cs_semibold cs_fs_24
-              max-custom-md:!text-[44px]"
+              max-custom-lg:!text-[44px]"
               >
                 Top 10 in Switzerland
               </h3>
               <h2
                 className="cs_section_title cs_semibold cs_fs_45 mb-0
-              max-custom-md:!text-[26px]"
+              max-custom-lg:!text-[26px]"
               >
                 . 2000+ successful cases
               </h2>
               <h2
                 className="cs_section_title cs_semibold cs_fs_45 mb-0
-              max-custom-md:!text-[26px]"
+              max-custom-lg:!text-[26px]"
               >
                 . Private operating block
               </h2>

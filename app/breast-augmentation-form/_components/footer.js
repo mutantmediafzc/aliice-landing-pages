@@ -11,10 +11,10 @@ export default function Footer() {
       >
         {/* 1st */}
         <div>
-          <h1 className="max-custom-md:!text-[26px]">
+          <h1 className="max-custom-lg:!text-[26px]">
             We deliver excellence through tailor-made solutions.
           </h1>
-          <h4 className="max-custom-md:!text-[20px]">
+          <h4 className="max-custom-lg:!text-[20px]">
             AESTHETICS CLINIC PROVIDES
           </h4>
           <ul>

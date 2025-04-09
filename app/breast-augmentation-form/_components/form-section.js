@@ -143,13 +143,13 @@ export default function FormSection() {
             >
               <h3
                 className="cs_appointment_title_up cs_accent_color_v4 cs_medium cs_fs_24
-              max-custom-md:!text-[44px]"
+              max-custom-lg:!text-[44px]"
               >
                 Price list and consultation booking
               </h3>
               <h2
                 className="cs_appointment_title cs_bold cs_fs_45 mb-0
-              max-custom-md:!text-[20px]"
+              max-custom-lg:!text-[20px]"
               >
                 To schedule a FREE CONSULTATION or receive our detailed PRICE
                 LIST by email, <br /> complete the form.
