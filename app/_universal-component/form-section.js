@@ -2,7 +2,23 @@
 
 import { useRef, useState } from "react";
 
-export default function FormSection() {
+export default function FormSection({
+  title,
+  subTitle,
+  firstNameLabel,
+  lastNameLabel,
+  emailLabel,
+  phoneLabel,
+  serviceLabel,
+  locationLabel,
+  selectText,
+  haveAlreadyPatientCheckbox,
+  questionLabel,
+  acceptTermsTextOne,
+  acceptTermsTextTwo,
+  btnText,
+  btnSubmittingText,
+}) {
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const formRef = useRef(null);
@@ -133,8 +149,10 @@ export default function FormSection() {
       id="contact"
     >
       <div className="cs_height_120 cs_height_lg_80" />
-      <div className="container
-      max-custom-md:!max-w-none">
+      <div
+        className="container
+      max-custom-md:!max-w-none"
+      >
         <div className="row">
           <div className="col-lg-10">
             <div
@@ -145,23 +163,24 @@ export default function FormSection() {
                 className="cs_appointment_title_up cs_accent_color_v4 cs_medium cs_fs_24
               max-custom-lg:!text-[44px]"
               >
-                Price list and consultation booking
+                {title}
               </h3>
               <h2
                 className="cs_appointment_title cs_bold cs_fs_45 mb-0
               max-custom-lg:!text-[20px]"
               >
-                To schedule a FREE CONSULTATION or receive our detailed PRICE
-                LIST by email, <br /> complete the form.
+                {subTitle}
               </h2>
               <form id="cs_form" ref={formRef} onSubmit={handleSubmit}>
                 <div
                   className="form-flex-row
                 max-custom-md:!flex-col"
                 >
-                  <div className="form-input flex-col position-relative
-                  max-custom-md:!max-w-none">
-                    <label htmlFor="fname">First Name*</label>
+                  <div
+                    className="form-input flex-col position-relative
+                  max-custom-md:!max-w-none"
+                  >
+                    <label htmlFor="fname">{firstNameLabel}</label>
                     <input
                       style={{
                         borderColor: errors.fname ? "red" : "#e1e1e1",
@@ -173,9 +192,11 @@ export default function FormSection() {
                     />
                     {errors.fname && <p id="email-error">{errors.fname}</p>}
                   </div>
-                  <div className="form-input flex-col position-relative
-                  max-custom-md:!max-w-none">
-                    <label htmlFor="lname">Last Name*</label>
+                  <div
+                    className="form-input flex-col position-relative
+                  max-custom-md:!max-w-none"
+                  >
+                    <label htmlFor="lname">{lastNameLabel}</label>
                     <input
                       style={{
                         borderColor: errors.lname ? "red" : "#e1e1e1",
@@ -192,9 +213,11 @@ export default function FormSection() {
                   className="form-flex-row
                 max-custom-md:!flex-col"
                 >
-                  <div className="form-input flex-col position-relative
-                  max-custom-md:!max-w-none">
-                    <label htmlFor="email">Email*</label>
+                  <div
+                    className="form-input flex-col position-relative
+                  max-custom-md:!max-w-none"
+                  >
+                    <label htmlFor="email">{emailLabel}</label>
                     <input
                       style={{
                         borderColor: errors.email ? "red" : "#e1e1e1",
@@ -207,11 +230,16 @@ export default function FormSection() {
                     />
                     {errors.email && <p id="email-error">{errors.email}</p>}
                   </div>
-                  <div className="form-input flex-col position-relative
-                  max-custom-md:!max-w-none">
-                    <label htmlFor="phone">Phone number*</label>
+                  <div
+                    className="form-input flex-col position-relative
+                  max-custom-md:!max-w-none"
+                  >
+                    <label htmlFor="phone">{phoneLabel}</label>
                     <div style={{ display: "flex" }}>
-                      <select style={{maxWidth: "150px"}} id="country-selector">
+                      <select
+                        style={{ maxWidth: "150px" }}
+                        id="country-selector"
+                      >
                         <option value="" defaultValue="+971" />
                       </select>
                       <input
@@ -228,11 +256,15 @@ export default function FormSection() {
                     </div>
                   </div>
                 </div>
-                <div className="form-flex-row
-                max-custom-md:!flex-col">
-                  <div className="form-input flex-col position-relative
-                  max-custom-md:!max-w-none">
-                    <label>I'm interested in the following service:*</label>
+                <div
+                  className="form-flex-row
+                max-custom-md:!flex-col"
+                >
+                  <div
+                    className="form-input flex-col position-relative
+                  max-custom-md:!max-w-none"
+                  >
+                    <label>{serviceLabel}</label>
                     <select
                       style={{
                         borderColor: errors.serviceSelector ? "red" : "#e1e1e1",
@@ -242,16 +274,18 @@ export default function FormSection() {
                       className="max-custom-md:!max-w-none"
                     >
                       <option value="" disabled="" defaultValue="">
-                        Please Select
+                        {selectText}
                       </option>
                     </select>
                     {errors.serviceSelector && (
                       <p id="email-error">{errors.serviceSelector}</p>
                     )}
                   </div>
-                  <div className="form-input flex-col position-relative
-                  max-custom-md:!max-w-none">
-                    <label>My preferred location is:*</label>
+                  <div
+                    className="form-input flex-col position-relative
+                  max-custom-md:!max-w-none"
+                  >
+                    <label>{locationLabel}</label>
                     <select
                       style={{
                         borderColor: errors.locationSelector
@@ -263,7 +297,7 @@ export default function FormSection() {
                       className="max-custom-md:!max-w-none"
                     >
                       <option value="" disabled="" defaultValue="">
-                        Please Select
+                        {selectText}
                       </option>
                       <option value="geneva">Geneva</option>
                       <option value="gstaad">Gstaad</option>
@@ -274,37 +308,33 @@ export default function FormSection() {
                     )}
                   </div>
                 </div>
+
                 <div>
-                  <hr className="line" />
-                  <div>
-                    <input
-                      type="checkbox"
-                      id="patient-checkbox"
-                      name="patient-checkbox"
-                    />
-                    <label htmlFor="patient-checkbox">Already a patient?</label>
-                  </div>
+                  {haveAlreadyPatientCheckbox && (
+                    <>
+                      {" "}
+                      <hr className="line" />
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="patient-checkbox"
+                          name="patient-checkbox"
+                        />
+                        <label htmlFor="patient-checkbox">
+                          Already a patient?
+                        </label>
+                      </div>
+                    </>
+                  )}
                 </div>
+
                 <div className="position-relative">
-                  <label htmlFor="message">
-                    If you have any further questions, please feel free to ask
-                    them here!
-                  </label>
+                  <label htmlFor="message">{questionLabel}</label>
                   <textarea id="message" name="message" />
                 </div>
                 <div>
-                  <p>
-                    Aesthetics Clinic Geneva needs the contact information you
-                    provide to us to contact you <br /> about our products and
-                    services.
-                  </p>
-                  <p>
-                    By clicking on "Confirm", you are agreeing with the terms
-                    listed in our{" "}
-                    <span>
-                      <a href="#">privacy policy</a>
-                    </span>
-                  </p>
+                  <p>{acceptTermsTextOne}</p>
+                  <p>{acceptTermsTextTwo}</p>
                 </div>
                 <div className="text-left">
                   <button
@@ -314,7 +344,7 @@ export default function FormSection() {
                     className="cs_btn cs_style_1 cs_radius_2 cs_size_md cs_accent_bg_v4 cs_white_color cs_fs_18 cs_semibold
                     max-custom-sm:!w-full"
                   >
-                    {isLoading ? "Submitting..." : "CONFIRM"}
+                    {isLoading ? btnSubmittingText : btnText}
                   </button>
                 </div>
               </form>

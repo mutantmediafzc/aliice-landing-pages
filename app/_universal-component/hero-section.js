@@ -2,7 +2,14 @@
 
 import { useRef } from "react";
 
-export default function HeroSection() {
+export default function HeroSection({
+  title,
+  mainTitle,
+  subtitle,
+  location,
+  btnText,
+  video,
+}) {
   const videoRef = useRef(null);
 
   function handlePlayClick(event) {
@@ -24,43 +31,58 @@ export default function HeroSection() {
       id="home"
       style={{ backgroundColor: "#2c2c2c" }}
     >
-      <div className="container
-      max-custom-md:!max-w-none">
-        <div style={{ position: "relative" }} className="cs_hero_in
-        max-custom-md:!flex max-custom-md:!flex-row max-custom-sm:!flex-col">
-          <div className="cs_hero_text
-          max-custom-md:!w-full">
-            <h3 className="cs_hero_mini_title cs_accent_color_v4 cs_fs_24 cs_semibold
-            max-custom-lg:!text-[26px]">
-              Free consultation
+      <div
+        className="container
+      max-custom-md:!max-w-none"
+      >
+        <div
+          style={{ position: "relative" }}
+          className="cs_hero_in
+        max-custom-md:!flex max-custom-md:!flex-row max-custom-sm:!flex-col"
+        >
+          <div
+            className="cs_hero_text
+          max-custom-md:!w-full"
+          >
+            <h3
+              className="cs_hero_mini_title cs_accent_color_v4 cs_fs_24 cs_semibold
+            max-custom-lg:!text-[26px]"
+            >
+              {title}
             </h3>
-            <h1 className="cs_hero_title cs_fs_60 cs_semibold
-            max-custom-lg:!text-[46px]">
-              Breast <br className="max-custom-lg:!block" /> Augmentation
+            <h1
+              className="cs_hero_title cs_fs_60 cs_semibold
+            max-custom-lg:!text-[46px]"
+            >
+              {mainTitle}
             </h1>
-            <p className="cs_hero_subtitle
-            max-custom-lg:!text-[23px]">
-              with 3D simulation
+            <p
+              className="cs_hero_subtitle
+            max-custom-lg:!text-[23px]"
+            >
+              {subtitle}
             </p>
-            <p className="cs_hero_subtitle">in Geneva, Montreux and Gstaad</p>
+            <p className="cs_hero_subtitle">{location}</p>
             <div className="cs_hero_btn_group">
               <a
                 href="#service"
                 className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium
                 max-custom-sm:!w-full"
               >
-                ONLINE BOOKING
+                {btnText}
               </a>
             </div>
           </div>
-          <div className="w-full max-w-[830px] cs_hero_img
+          <div
+            className="w-full max-w-[830px] cs_hero_img
           max-custom-sm:!relative max-custom-sm:!top-10 max-custom-sm:!max-w-none
           max-custom-md:!max-w-[414px]
-          max-custom-lg:!max-w-[550px]">
+          max-custom-lg:!max-w-[550px]"
+          >
             <video
               id="heroVideo"
               ref={videoRef}
-              src="/assets/images/vid-home.mp4"
+              src={video}
               alt="Hero Image"
               controls=""
             />
