@@ -104,7 +104,7 @@ export default function Home() {
         title="Top 10 en Suisse"
         subTitle={
           <>
-            . Dirigé par le professeur <br /> d'injections Dr. Tenorio
+            . Dirigé par le professeur <br /> d&apos;injections Dr. Tenorio
           </>
         }
         paragraphOne="Notre équipe est formée par notre médecin suisse diplômé, Xavier Tenorio. Il est expert en chirurgie plastique, esthétique et reconstructive (FMH), formateur international et professeur d’injections."

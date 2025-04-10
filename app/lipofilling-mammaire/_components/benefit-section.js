@@ -28,7 +28,7 @@ export default function BenefitSection() {
               <h2 className="cs_section_title cs_semibold cs_fs_45 mb-0
               max-custom-semilg:!text-[26px]">
                 Vous pouvez obtenir un financement <br />
-                jusqu'à 5 000 CHF.
+                jusqu&apos;à 5 000 CHF.
               </h2>
             </div>
             <div className="cs_height_17 cs_height_lg_10" />

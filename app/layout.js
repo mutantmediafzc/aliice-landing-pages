@@ -1,5 +1,37 @@
 import "./globals.css";
+import { Open_Sans } from "next/font/google";
+import localFont from "next/font/local";
+import "./_universal-css/bootstrap.min.css";
+import "./_universal-css/fontawesome.min.css";
+import "./_universal-css/animate.css";
+import "./_universal-css/animated-text.css";
+import "./_universal-css/slick.min.css";
+import "./_universal-css/light_gallery.min.css";
+import "./_universal-css/odometer.css";
+import "./_universal-css/timepicker.min.css";
+import "./_universal-css/jquery-ui.min.css";
+import "./_universal-css/select2.min.css";
+import "./_universal-css/style.css";
 import Script from "next/script";
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+  variable: "--font-open-sans",
+});
+
+const ivyModeLight = localFont({
+  src: "../public/assets/fonts/ivy-mode/IvyMode-Light.woff2",
+  variable: "--font-ivy-mode-light",
+  display: "swap",
+});
+
+const ivyModeReg = localFont({
+  src: "../public/assets/fonts/ivy-mode/IvyMode-Regular.woff2",
+  variable: "--font-ivy-mode-reg",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Aesthetics - Plastic Surgery & Aesthetic Medicine",
@@ -9,18 +41,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />
-        <link rel="stylesheet" href="/assets/css/animate.css" />
-        <link rel="stylesheet" href="/assets/css/animated-text.css" />
-        <link rel="stylesheet" href="/assets/css/slick.min.css" />
-        <link rel="stylesheet" href="/assets/css/light_gallery.min.css" />
-        <link rel="stylesheet" href="/assets/css/odometer.css" />
-        <link rel="stylesheet" href="/assets/css/timepicker.min.css" />
-        <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
-        <link rel="stylesheet" href="/assets/css/select2.min.css" />
-        <link rel="stylesheet" href="/assets/css/style.css" />
-
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -28,24 +48,15 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-          rel="stylesheet"
-        />
-
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
       </head>
 
-      <body>
+      <body
+        className={`${openSans.variable} ${ivyModeLight.variable} ${ivyModeReg.variable} antialiased`}
+      >
         {children}
 
         <Script

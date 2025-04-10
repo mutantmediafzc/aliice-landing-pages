@@ -71,7 +71,7 @@ export default function Home() {
         acceptTermsTextTwo={
           <>
             {" "}
-            By clicking on "Confirm", you are agreeing with the terms listed in
+            By clicking on &quot;Confirm&quot;, you are agreeing with the terms listed in
             our{" "}
             <span>
               <Link href="#">privacy policy</Link>

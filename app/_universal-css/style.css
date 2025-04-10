@@ -5698,7 +5698,7 @@ a.ui-button:active,
   position: absolute;
   height: 75px;
   width: 100%;
-  background-image: url(../images/hero-shape.svg);
+  background-image: url('/assets/images/hero-shape.svg');
   bottom: -5px;
   z-index: -1;
 }
@@ -10530,19 +10530,8 @@ a.ui-button:active,
 
 
 /* Custom CSS */
-@font-face {
-  font-family: "IvyModeLight";
-  src: url("../fonts/ivy-mode/IvyMode-Light.woff2");
-}
-
-@font-face {
-  font-family: "IvyModeReg";
-  src: url("../fonts/ivy-mode/IvyMode-Regular.woff2");
-}
-
-
 .nav-opensans {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 300 !important;
 }
 
@@ -10551,14 +10540,14 @@ a.ui-button:active,
 }
 
 #home > div > div > div.cs_hero_text > h3 {
-  font-family: "IvyModeLight", sans-serif !important;
+  font-family: var(--font-ivy-mode-light), sans-serif !important;
   font-size: 34px;
   font-weight: 300 !important;
   color: white;
 }
 
 #home > div > div > div.cs_hero_text > h1 {
-  font-family: "IvyModeLight", sans-serif !important;
+  font-family: var(--font-ivy-mode-light), sans-serif !important;
   font-size: 78px;
   font-weight: 300 !important;
   color: white;
@@ -10578,7 +10567,7 @@ a.ui-button:active,
 }
 
 #home > div > div > div.cs_hero_text > p:nth-child(3) {
-  font-family: "IvyModeLight", sans-serif !important;
+  font-family: var(--font-ivy-mode-light), sans-serif !important;
   font-size: 34px;
   font-weight: 300 !important;
   color: white;
@@ -10587,7 +10576,7 @@ a.ui-button:active,
 
 #home > div > div > div.cs_hero_text > p:nth-child(4) {
   color: white;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 300 !important;
   font-size: 20px;
   margin-top: 20px;
@@ -10599,7 +10588,7 @@ a.ui-button:active,
   text-align: center !important;
   border-radius: 60px;
   border: 1px solid white;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 400 !important;
   font-size: 16px;
 }
@@ -10609,14 +10598,14 @@ a.ui-button:active,
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > div.cs_section_heading.cs_style_1 > h3 {
-  font-family: "IvyModeReg", sans-serif !important;
+  font-family: var(--font-ivy-mode-reg), sans-serif !important;
   font-size: 64px;
   font-weight: 400 !important;
   color: #252525;
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > div.cs_section_heading.cs_style_1 > h2 {
-  font-family: "IvyModeReg", sans-serif !important;
+  font-family: var(--font-ivy-mode-reg), sans-serif !important;
   font-size: 36px;
   font-weight: 400 !important;
   color: black;
@@ -10624,7 +10613,7 @@ a.ui-button:active,
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > p:nth-child(3) {
   color: #252525;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 100 !important;
   font-size: 16px;
   margin-bottom: 0px !important;
@@ -10634,7 +10623,7 @@ a.ui-button:active,
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > p:nth-child(4) {
   color: #252525;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 100 !important;
   font-size: 16px;
   margin-bottom: 0px !important;
@@ -10644,7 +10633,7 @@ a.ui-button:active,
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > p:nth-child(5) {
   color: #252525;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 100 !important;
   font-size: 16px;
   margin-bottom: 0px !important;
@@ -10654,7 +10643,7 @@ a.ui-button:active,
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > p:nth-child(6) {
   margin-top: 10px;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 100 !important;
   font-size: 16px;
 }
@@ -10665,7 +10654,7 @@ a.ui-button:active,
   text-align: center !important;
   border-radius: 60px;
   border: 1px solid #393C43;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 400 !important;
   font-size: 16px;
 }
@@ -10676,7 +10665,7 @@ a.ui-button:active,
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > div.cs_author_card.cs_version_4.position-relative > div > div:nth-child(3) > p {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   color: #252525 !important;
   font-size: 14px;
   line-height: 20px;
@@ -10691,7 +10680,7 @@ a.ui-button:active,
   font-weight: 100;
   padding-left: 0px;
   padding-right: 0px;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > div.cs_author_card.cs_version_4.position-relative > div > div:nth-child(3) > a:hover {
@@ -10715,7 +10704,7 @@ a.ui-button:active,
 }
 
 body > div.gallery-container > p {
-  font-family: "IvyModeReg", sans-serif !important;
+  font-family: var(--font-ivy-mode-reg), sans-serif !important;
   font-size: 64px;
   font-weight: 400 !important;
   color: #252525;
@@ -10725,7 +10714,7 @@ body > div.gallery-container > div.info-text {
   font-size: 16px;
   color: #7F7F7F;
   font-weight: 100;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
 }
 
 body > div.gallery-container > div.buttons > button {
@@ -10735,7 +10724,7 @@ body > div.gallery-container > div.buttons > button {
   border: 1px solid #393C43;
   padding-left: 15px;
   padding-right: 15px;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 400 !important;
   font-size: 16px;
 }
@@ -10745,7 +10734,7 @@ body > div.gallery-container > div.buttons > button:hover {
 }
 
 body > div.gallery-container > div.buttons > div:nth-child(3) > p {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   color: #252525 !important;
   font-size: 14px;
   line-height: 20px;
@@ -10760,7 +10749,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > button {
   font-weight: 100;
   padding-left: 0px;
   padding-right: 0px;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
 }
 
 body > div.gallery-container > div.buttons > div:nth-child(3) > button:hover {
@@ -10770,7 +10759,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > button:hover {
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > div.cs_section_heading.cs_style_1 > h3 {
-  font-family: "IvyModeReg", sans-serif !important;
+  font-family: var(--font-ivy-mode-reg), sans-serif !important;
   font-size: 64px;
   font-weight: 400 !important;
   color: #252525;
@@ -10778,7 +10767,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > button:hover {
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > div.cs_section_heading.cs_style_1 > h2 {
   margin-top: 20px;
-  font-family: "IvyModeReg", sans-serif !important;
+  font-family: var(--font-ivy-mode-reg), sans-serif !important;
   font-size: 36px;
   font-weight: 400 !important;
   color: black;
@@ -10788,7 +10777,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > button:hover {
   font-size: 20px;
   color: #252525;
   font-weight: 100;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > p:nth-child(3) > span {
@@ -10799,7 +10788,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > button:hover {
   font-size: 16px;
   color: #252525;
   font-weight: 100;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   margin-top: 15px;
 }
 
@@ -10807,12 +10796,12 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > button:hover {
   font-size: 16px;
   color: #252525;
   font-weight: 100;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   margin-top: 15px;
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > div.cs_author_card.cs_version_4.position-relative > div > div > p {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   color: #252525;
   font-size: 14px;
   line-height: 20px;
@@ -10828,7 +10817,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > button:hover {
   font-weight: 100;
   padding-left: 0px;
   padding-right: 0px;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > div.cs_author_card.cs_version_4.position-relative > div > div > a:hover {
@@ -10844,7 +10833,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a {
 	font-weight: 100;
 	padding-left: 0px;
 	padding-right: 0px;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
 }
 
 body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
@@ -10853,14 +10842,14 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 }
 
 #contact > div.container > div > div > div > h3 {
-  font-family: "IvyModeReg", sans-serif !important;
+  font-family: var(--font-ivy-mode-reg), sans-serif !important;
   font-size: 64px;
   font-weight: 400 !important;
   color: #252525;
 }
 
 #contact > div.container > div > div > div > h2 {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   color: #4c4c4c;
   font-size: 24px;
   font-weight: 100;
@@ -10912,14 +10901,14 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 
 .form-flex-row label {
   padding-bottom: 15px;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 300;
   font-size: 16px;
   color: #252525;
 }
 
 #cs_form > div:nth-child(4) > div > label {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-size: 16px;
   color: #252525;
   font-weight: 300;
@@ -10944,7 +10933,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 
 #cs_form > div.position-relative > label {
   padding-bottom: 15px;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 300;
   font-size: 16px;
   color: #252525;
@@ -10971,7 +10960,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 }
 
 #cs_form > div:nth-child(6) p {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-size: 12px;
   font-weight: 100;
 }
@@ -10986,7 +10975,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
   text-align: center !important;
   border-radius: 60px;
   border: 1px solid #393C43;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   font-weight: 400 !important;
   font-size: 16px;
   margin-top: 20px;
@@ -10997,7 +10986,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
     color: #252525;
     font-size: 64px;
     font-weight: 400;
-	font-family: "IvyModeReg", sans-serif !important;
+	font-family: var(--font-ivy-mode-reg), sans-serif !important;
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > div.cs_section_heading.cs_style_1 > h2 {
@@ -11005,12 +10994,12 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
     color: #000000;
     font-size: 36px;
     font-weight: 400;
-	font-family: "IvyModeReg", sans-serif !important;
+	font-family: var(--font-ivy-mode-reg), sans-serif !important;
 }
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > p:nth-child(3) {
     -webkit-font-smoothing: antialiased;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
     font-weight: 100 !important;
     margin: 10px 0;
     font-size: 16px;
@@ -11028,7 +11017,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 
 .links-div-home-page .places {
     -webkit-font-smoothing: antialiased;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
     text-decoration: none;
     font-size: 16px;
     color: #393C43;
@@ -11055,7 +11044,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
     font-weight: 100 !important;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    font-family: "Open Sans", sans-serif !important;
+    font-family: var(--font-open-sans), sans-serif !important;
     color: #252525;
     padding-left: 10px !important;
 	margin-bottom: 0px !important;
@@ -11077,7 +11066,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > p:nth-child(7) {
     -webkit-font-smoothing: antialiased;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
     font-weight: 100 !important;
     font-size: 16px;
     color: #252525;
@@ -11086,7 +11075,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > a {
     -webkit-font-smoothing: antialiased;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
     text-decoration: none;
     font-size: 16px;
     color: #393C43;
@@ -11107,7 +11096,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > p:nth-child(9) {
     -webkit-font-smoothing: antialiased;
-    font-family: "Open Sans", sans-serif !important;
+    font-family: var(--font-open-sans), sans-serif !important;
     font-size: 16px;
     color: #252525;
     font-weight: 600;
@@ -11116,7 +11105,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 
 .call-us {
     -webkit-font-smoothing: antialiased;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
     font-size: 16px;
     color: #252525;
 	font-weight: 600;
@@ -11127,7 +11116,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 	font-size: 20px;
 	font-weight: 600 !important;
 	-webkit-font-smoothing: antialiased;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
     color: #252525;
 	margin-bottom: 0px !important;
 	line-height: 35px;
@@ -11141,7 +11130,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 
 #about > div.container > div > div.col-lg-7.cs_pl_30 > p:nth-child(11) {
     -webkit-font-smoothing: antialiased;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
     font-weight: 100 !important;
     font-size: 16px;
     color: #252525;
@@ -11163,7 +11152,7 @@ body > div.gallery-container > div.buttons > div:nth-child(3) > a:hover {
 body > footer > div.footer-flex > div:nth-child(1) > h1 {
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
-    font-family: "IvyModeReg", sans-serif !important;
+    font-family: var(--font-ivy-mode-reg), sans-serif !important;
     color: #fff;
     font-size: 36px;
 }
@@ -11171,7 +11160,7 @@ body > footer > div.footer-flex > div:nth-child(1) > h1 {
 body > footer > div.footer-flex > div:nth-child(1) > h4 {
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
-	font-family: "IvyModeReg", sans-serif !important;
+	font-family: var(--font-ivy-mode-reg), sans-serif !important;
     text-transform: uppercase;
     color: #fff;
     font-size: 24px;
@@ -11181,7 +11170,7 @@ body > footer > div.footer-flex > div:nth-child(1) > h4 {
 .aesthetic-clinics-provides {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    font-family: "Open Sans", sans-serif !important;
+    font-family: var(--font-open-sans), sans-serif !important;
     color: #fff;
     padding-left: 30px !important;
     font-weight: 400;
@@ -11194,13 +11183,13 @@ body > footer > div.footer-flex > div:nth-child(1) > h4 {
     font-weight: 400;
     color: #fff;
     opacity: 0.6;
-    font-family: "IvyModeReg", sans-serif !important;
+    font-family: var(--font-ivy-mode-reg), sans-serif !important;
 	margin-top: 20px;
 }
 
 .footer-address {
     -webkit-font-smoothing: antialiased;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
     color: #7f7f7f;
     font-size: 12px;
     font-weight: 300;
@@ -11209,7 +11198,7 @@ body > footer > div.footer-flex > div:nth-child(1) > h4 {
 
 .footer-real-address {
     -webkit-font-smoothing: antialiased;
-	font-family: "Open Sans", sans-serif !important;
+	font-family: var(--font-open-sans), sans-serif !important;
     font-weight: 100 !important;
     font-size: 16px;
     color: #fff;
@@ -11218,7 +11207,7 @@ body > footer > div.footer-flex > div:nth-child(1) > h4 {
 .footer-email {
     font-weight: 100 !important;
     -webkit-font-smoothing: antialiased;
-    font-family: "Open Sans", sans-serif !important;
+    font-family: var(--font-open-sans), sans-serif !important;
     text-decoration: none;
     font-size: 12px;
     color: #fff !important;
@@ -11229,7 +11218,7 @@ body > footer > div.footer-flex > div:nth-child(1) > h4 {
 .footer-tel {
     font-weight: 100 !important;
     -webkit-font-smoothing: antialiased;
-    font-family: "Open Sans", sans-serif !important;
+    font-family: var(--font-open-sans), sans-serif !important;
     font-size: 16px;
     color: #fff !important;
     text-decoration: underline;
@@ -11238,7 +11227,7 @@ body > footer > div.footer-flex > div:nth-child(1) > h4 {
 body > footer > div.footer-flex > div:nth-child(2) > div > h5 {
     -webkit-font-smoothing: antialiased;
     font-weight: 300;
-    font-family: "IvyModeReg", sans-serif !important;
+    font-family: var(--font-ivy-mode-reg), sans-serif !important;
     font-size: 24px;
     color: #fff !important;
 	margin-bottom: 0px;
@@ -11340,7 +11329,7 @@ body > div.gallery-container > div.swiper.swiper-initialized.swiper-horizontal.s
 
 .current {
     -webkit-font-smoothing: antialiased;
-    font-family: "IvyModeReg", sans-serif !important;
+    font-family: var(--font-ivy-mode-reg), sans-serif !important;
     font-weight: 300;
     font-size: 40px;
     color: #212121;
@@ -11351,7 +11340,7 @@ body > div.gallery-container > div.swiper.swiper-initialized.swiper-horizontal.s
 
 .total {
     -webkit-font-smoothing: antialiased;
-	font-family: "IvyModeReg", sans-serif !important;
+	font-family: var(--font-ivy-mode-reg), sans-serif !important;
     font-weight: 300;
     font-size: 24px;
     color: #A2A2A2;
@@ -11361,7 +11350,7 @@ body > div.gallery-container > div.swiper.swiper-initialized.swiper-horizontal.s
 
 .fraction-dash {
 	-webkit-font-smoothing: antialiased;
-	font-family: "IvyModeReg", sans-serif !important;
+	font-family: var(--font-ivy-mode-reg), sans-serif !important;
     font-weight: 300;
     font-size: 50px;
 	color: #212121;
@@ -11383,7 +11372,7 @@ body > div.gallery-container > div.swiper.swiper-initialized.swiper-horizontal.s
 body > footer > div.hidden.mt-5.max-custom-xs\:block > div > div:nth-child(9) > h5 {
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
-  font-family: "IvyModeReg", sans-serif !important;
+  font-family: var(--font-ivy-mode-reg), sans-serif !important;
   font-size: 24px;
   color: #fff !important;
   margin-bottom: 0px;

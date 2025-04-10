@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ContactSection({
   img,
   title,
@@ -38,7 +40,14 @@ export default function ContactSection({
               className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
               max-custom-md:!max-w-[436px]"
             >
-              <img src={img} alt="About Thumb" />
+              <Image
+                src={img}
+                width={436}
+                height={595}
+                className="!w-full"
+                alt="About Thumb"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             </div>
           </div>
           <div className="col-lg-7 cs_pl_30">
