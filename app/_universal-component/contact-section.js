@@ -38,12 +38,12 @@ export default function ContactSection({
           >
             <div
               className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
-              max-custom-md:!max-w-[436px]"
+              max-custom-md:!max-w-[436px] !w-full"
             >
               <Image
                 src={img}
-                width={436}
-                height={595}
+                width={526}
+                height={717}
                 className="!w-full"
                 alt="About Thumb"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FrFooter() {
   return (
     <footer
@@ -255,20 +257,20 @@ export default function FrFooter() {
               max-custom-md:!flex max-custom-md:!justify-center max-custom-md:!items-center max-custom-md:!w-full"
             >
               <li>
-                <a
+                <Link
                   className="max-custom-md:!text-[10px] hover:!text-custom-yellow"
                   href="#"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="max-custom-md:!text-[10px] hover:!text-custom-yellow"
                   href="#"
                 >
                   Terms &amp; Conditions
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

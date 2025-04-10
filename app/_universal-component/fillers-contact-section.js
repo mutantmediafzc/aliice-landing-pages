@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function FillersContactSection({
   imgOne,
   imgTwo,
@@ -32,22 +34,28 @@ export default function FillersContactSection({
           <div className="col-lg-5 flex flex-col items-center">
             <div
               className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
-            max-w-[436px]"
+            !max-w-[436px] !max-h-[451px] !h-full !w-full"
             >
-              <img
-                className="max-h-[451px] max-w-[436px]"
+              <Image
+                className="!max-h-[451px] !max-w-[436px] !w-full !h-full"
+                width={436}
+                height={451}
                 src={imgOne}
                 alt="About Thumb"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <div
               className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
-            max-w-[436px]"
+            !max-w-[436px] !max-h-[451px] !h-full !w-full"
             >
-              <img
-                className="mt-4 max-h-[451px] max-w-[436px]"
+              <Image
+                className="mt-4 !max-h-[451px] !max-w-[436px] !w-full !h-full"
+                width={436}
+                height={451}
                 src={imgTwo}
                 alt="About Thumb"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
           </div>

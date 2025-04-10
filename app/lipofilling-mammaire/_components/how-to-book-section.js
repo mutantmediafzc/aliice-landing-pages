@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HowToBookSection() {
   return (
     <section
@@ -6,31 +8,54 @@ export default function HowToBookSection() {
       id="about"
     >
       <div className="cs_height_120 cs_height_lg_80" />
-      <div className="cs_height_120 cs_height_lg_80 max-custom-semilg:!hidden"/>
-      <div className="container
-      max-custom-semilg:!max-w-[700px]">
-        <div className="row cs_gap_y_40 
-        max-custom-semilg:!flex max-custom-semilg:!flex-col-reverse">
-          <div className="col-lg-5
-          max-custom-semilg:!flex max-custom-semilg:!flex-col max-custom-semilg:!items-center">
-            <div className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
-            max-custom-semilg:!max-w-[436px]">
-              <img
+      <div className="cs_height_120 cs_height_lg_80 max-custom-semilg:!hidden" />
+      <div
+        className="container
+      max-custom-semilg:!max-w-[700px]"
+      >
+        <div
+          className="row cs_gap_y_40 
+        max-custom-semilg:!flex max-custom-semilg:!flex-col-reverse"
+        >
+          <div
+            className="col-lg-5
+          max-custom-semilg:!flex max-custom-semilg:!flex-col max-custom-semilg:!items-center"
+          >
+            <div
+              className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
+            max-custom-semilg:!max-w-[436px] !w-full"
+            >
+              <Image
                 style={{ marginBottom: 20 }}
-                src="assets/images/image-three.jpg"
+                src="/assets/images/image-three.jpg"
+                className="!w-full"
+                width={526}
+                height={330}
                 alt="About Thumb"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <img className="max-custom-semilg:!max-w-[436px]" src="assets/images/image-four.jpg" alt="About Thumb" />
+              <Image
+                className="max-custom-semilg:!max-w-[436px] !w-full"
+                src="/assets/images/image-four.jpg"
+                width={526}
+                height={275}
+                alt="About Thumb"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             </div>
           </div>
           <div className="col-lg-7 cs_pl_30">
             <div className="cs_section_heading cs_style_1">
-              <h3 className="cs_section_title_up cs_accent_color_v4 cs_semibold cs_fs_24
-              max-custom-semilg:!text-[44px]">
+              <h3
+                className="cs_section_title_up cs_accent_color_v4 cs_semibold cs_fs_24
+              max-custom-semilg:!text-[44px]"
+              >
                 Comment réserver une consultation en ligne ?
               </h3>
-              <h2 className="cs_section_title cs_semibold cs_fs_45 mb-0
-              max-custom-semilg:!text-[26px]">
+              <h2
+                className="cs_section_title cs_semibold cs_fs_45 mb-0
+              max-custom-semilg:!text-[26px]"
+              >
                 Choisissez la ville où vous souhaitez rencontrer un expert.
               </h2>
             </div>
@@ -39,8 +64,10 @@ export default function HowToBookSection() {
               Nous vous offrons le meilleur environnement <br />
               luxueux et convivial à
             </p>
-            <div className="links-div-home-page
-            max-custom-semilg:!gap-[10px]">
+            <div
+              className="links-div-home-page
+            max-custom-semilg:!gap-[10px]"
+            >
               <a href="#" className="places max-custom-semilg:!flex-1">
                 GENEVA
               </a>
@@ -65,10 +92,13 @@ export default function HowToBookSection() {
               — Choisissez une date et une heure et obtenez une confirmation
             </p>
             {/* PUT HERE */}
-            <img
+            <Image
               className="book-appointment"
-              src="assets/images/book-appointment.png"
+              src="/assets/images/book-appointment.png"
+              width={403}
+              height={473}
               alt="Appointment steps"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
             <div className="cs_author_card cs_version_4 position-relative">
               <div
@@ -94,12 +124,11 @@ export default function HowToBookSection() {
                     className="cs_about_text cs_type_2
                     max-custom-semilg:!mt-[20px]"
                   >
-                    Remplissez le formulaire et nous vous contacterons <br /> pour choisir un moment qui vous convient
-
-
+                    Remplissez le formulaire et nous vous contacterons <br />{" "}
+                    pour choisir un moment qui vous convient
                   </p>
                   <a href="#form-a" className="links-div-home-page-a uppercase">
-                  Aller au Formulaire
+                    Aller au Formulaire
                   </a>
                   <i className="fa-solid fa-arrow-up" />
                 </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function BenefitSection() {
   return (
     <section
@@ -7,26 +9,45 @@ export default function BenefitSection() {
     >
       <div className="cs_height_120 cs_height_lg_80" />
       <div className="cs_height_120 cs_height_lg_80 max-custom-semilg:!hidden" />
-      <div className="container
-      max-custom-semilg:!max-w-[700px]">
-        <div className="row cs_gap_y_40 
-        max-custom-semilg:!flex max-custom-semilg:!flex-col-reverse">
-          <div className="col-lg-5
-          max-custom-semilg:!flex max-custom-semilg:!justify-center">
-            <div className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
-            max-custom-semilg:!max-w-[436px]">
-              <img src="assets/images/image-two.jpg" alt="About Thumb" />
+      <div
+        className="container
+      max-custom-semilg:!max-w-[700px]"
+      >
+        <div
+          className="row cs_gap_y_40 
+        max-custom-semilg:!flex max-custom-semilg:!flex-col-reverse"
+        >
+          <div
+            className="col-lg-5
+          max-custom-semilg:!flex max-custom-semilg:!justify-center"
+          >
+            <div
+              className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
+            max-custom-semilg:!max-w-[436px] !w-full"
+            >
+              <Image
+                src="/assets/images/image-two.jpg"
+                width={526}
+                height={616}
+                className="!w-full"
+                alt="About Thumb"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             </div>
           </div>
           <div className="col-lg-7 cs_pl_30">
             <div className="cs_section_heading cs_style_1">
-              <h3 className="cs_section_title_up cs_accent_color_v4 cs_semibold cs_fs_24
-              max-custom-semilg:!text-[44px]">
+              <h3
+                className="cs_section_title_up cs_accent_color_v4 cs_semibold cs_fs_24
+              max-custom-semilg:!text-[44px]"
+              >
                 Bénéficiez du fonds <br />
                 Medcapital
               </h3>
-              <h2 className="cs_section_title cs_semibold cs_fs_45 mb-0
-              max-custom-semilg:!text-[26px]">
+              <h2
+                className="cs_section_title cs_semibold cs_fs_45 mb-0
+              max-custom-semilg:!text-[26px]"
+              >
                 Vous pouvez obtenir un financement <br />
                 jusqu&apos;à 5 000 CHF.
               </h2>

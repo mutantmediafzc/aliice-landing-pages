@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function FirstSection({
   img,
   mainTitle,
@@ -34,9 +37,16 @@ export default function FirstSection({
           >
             <div
               className="cs_about_thumb cs_version_4 position-relative wow fadeInLeft
-              max-custom-md:!max-w-[436px]"
+              max-custom-md:!max-w-[436px] !w-full"
             >
-              <img src={img} alt="About Thumb" />
+              <Image
+                src={img}
+                width={526}
+                height={519}
+                className="!w-full"
+                alt="About Thumb"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             </div>
           </div>
           <div className="col-lg-7 cs_pl_30">
@@ -64,13 +74,13 @@ export default function FirstSection({
                 className="!flex !justify-between !items-center !w-full !gap-5 cs_hero_btn_group
                   max-custom-sm:!flex-col max-custom-sm:!justify-center"
               >
-                <a
+                <Link
                   href="#service"
                   className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium uppercase
                     max-custom-sm:!w-full"
                 >
                   {btnText}
-                </a>
+                </Link>
                 <div
                   className="pipeline
                   max-custom-sm:!hidden"
