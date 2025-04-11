@@ -86,7 +86,7 @@ export default function FillersContactSection({
               {appointmentText}
             </p>
             <a
-              href="#service"
+              href="https://aliice.space/doctors"
               className="links-div-home-page-a uppercase
             max-custom-sm:!w-full max-custom-sm:!block max-custom-sm:!max-w-none"
             >

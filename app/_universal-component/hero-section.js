@@ -14,10 +14,13 @@ export default function HeroSection({
 
   function handlePlayClick(event) {
     event.preventDefault();
-
+  
     if (videoRef.current) {
       if (videoRef.current.paused) {
+        videoRef.current.muted = false;
         videoRef.current.play();
+      } else if (videoRef.current.muted) {
+        videoRef.current.muted = false;
       } else {
         videoRef.current.pause();
       }
@@ -65,7 +68,7 @@ export default function HeroSection({
             <p className="cs_hero_subtitle">{location}</p>
             <div className="cs_hero_btn_group">
               <a
-                href="#service"
+                href="https://aliice.space/doctors"
                 className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium uppercase
                 max-custom-sm:!w-full"
               >
@@ -84,6 +87,9 @@ export default function HeroSection({
               ref={videoRef}
               src={video}
               alt="Hero Image"
+              autoPlay
+              muted
+              playsInline
               controls=""
             />
             <button

@@ -111,7 +111,7 @@ export default function HowToBookSection() {
                 max-custom-md:!flex-col"
               >
                 <a
-                  href="#service"
+                  href="https://aliice.space/doctors"
                   className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium
                   max-custom-semilg:!w-full max-custom-semilg:!max-w-[300px]"
                 >

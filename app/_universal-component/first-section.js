@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function FirstSection({
   img,
@@ -74,13 +73,13 @@ export default function FirstSection({
                 className="!flex !justify-between !items-center !w-full !gap-5 cs_hero_btn_group
                   max-custom-sm:!flex-col max-custom-sm:!justify-center"
               >
-                <Link
-                  href="#service"
+                <a
+                  href="https://aliice.space/doctors"
                   className="cs_btn cs_style_1 cs_accent_bg_v4 cs_white_color cs_fs_18 cs_medium uppercase
                     max-custom-sm:!w-full"
                 >
                   {btnText}
-                </Link>
+                </a>
                 <div
                   className="pipeline
                   max-custom-sm:!hidden"

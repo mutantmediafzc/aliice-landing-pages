@@ -90,12 +90,20 @@ export default function SwiperSection() {
         Réservez une consultation 3D GRATUITE et nous vous montrerons les
         résultats de nos <br /> clients qui sont proches de votre cas personnel
       </div>
-      <div className="buttons
-      max-custom-sm:!flex-col max-custom-semilg:!w-full">
-        <button className="button
-        max-custom-semilg:!w-full max-custom-semilg:!max-w-[300px]">RDV EN LIGNE</button>
-        <div className="pipeline
-        max-custom-sm:!hidden" />
+      <div
+        className="buttons
+      max-custom-sm:!flex-col max-custom-semilg:!w-full"
+      >
+        <a href="https://aliice.space/doctors"
+          className="button !rounded-[60px]
+        max-custom-semilg:!w-full max-custom-semilg:!max-w-[300px]"
+        >
+          RDV EN LIGNE
+        </a>
+        <div
+          className="pipeline
+        max-custom-sm:!hidden"
+        />
         <div>
           <p className="cs_about_text cs_type_2 ">
             Remplissez le formulaire pour obtenir plus de <br /> photos avant et
