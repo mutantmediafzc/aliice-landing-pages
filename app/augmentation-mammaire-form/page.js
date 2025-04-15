@@ -81,6 +81,7 @@ export default function Home() {
         }
         btnText="SOUMETTRE"
         btnSubmittingText="SOUMISSION..."
+        language="french"
       />
       <ContactSection
         img="/assets/images/image-five.jpg"

@@ -95,6 +95,7 @@ export default function Home() {
         }
         btnText="SOUMETTRE"
         btnSubmittingText="SOUMISSION..."
+        language="french"
       />
       <HowToBookSection />
       <ContactSection

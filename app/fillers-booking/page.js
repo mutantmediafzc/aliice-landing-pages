@@ -84,6 +84,7 @@ export default function Home() {
         }
         btnText="CONFIRM"
         btnSubmittingText="Submitting..."
+        language="english"
       />
       <FillersContactSection
         imgOne="/assets/images/doctor-girl-1.jpg"

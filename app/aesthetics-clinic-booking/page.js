@@ -76,6 +76,7 @@ export default function Home() {
         }
         btnText="CONFIRM"
         btnSubmittingText="Submitting..."
+        language="english"
       />
       <ContactSection
         img="/assets/images/image-five.jpg"

@@ -18,6 +18,7 @@ export default function FormSection({
   acceptTermsTextTwo,
   btnText,
   btnSubmittingText,
+  language
 }) {
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
@@ -81,6 +82,7 @@ export default function FormSection({
     }
 
     const message = formData.get("message");
+    const isPatient = haveAlreadyPatientCheckbox ? formData.has("patient-checkbox") : false;
 
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -97,6 +99,8 @@ export default function FormSection({
       service_id: parseInt(serviceSelector),
       clinic_preference: locationSelector,
       description: message,
+      language: language,
+      isPatient: isPatient
     };
 
     try {

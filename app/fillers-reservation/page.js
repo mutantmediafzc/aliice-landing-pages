@@ -97,6 +97,7 @@ export default function Home() {
         }
         btnText="SOUMETTRE"
         btnSubmittingText="SOUMISSION..."
+        language="french"
       />
       <FillersContactSection
         imgOne="/assets/images/doctor-girl-1.jpg"
