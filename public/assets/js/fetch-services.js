@@ -4,7 +4,7 @@ const phone = document.querySelector('#phone');
 let countryData = [];
 
 async function popuateServicesDropDown() {
-	const jsonURL = 'https://aliice.space/api/services';
+	const jsonURL = 'https://aliice.space/api/form-services';
 
 	try {
 		const response = await fetch(jsonURL);
