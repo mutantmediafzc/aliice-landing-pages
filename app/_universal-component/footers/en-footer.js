@@ -251,10 +251,10 @@ export default function EnFooter() {
               <ul className="cs_footer_links cs_version_4 cs_mp0  cs_fs_18 cs_white_color
               max-custom-md:!flex max-custom-md:!justify-center max-custom-md:!items-center max-custom-md:!w-full">
                 <li>
-                  <Link className="max-custom-md:!text-[10px] hover:!text-custom-yellow" href="#">Privacy Policy</Link>
+                  <Link className="max-custom-md:!text-[10px] hover:!text-custom-yellow" href="/terms-and-conditions">Privacy Policy</Link>
                 </li>
                 <li>
-                  <Link className="max-custom-md:!text-[10px] hover:!text-custom-yellow" href="#">Terms &amp; Conditions</Link>
+                  <Link className="max-custom-md:!text-[10px] hover:!text-custom-yellow" href="/terms-and-conditions">Terms &amp; Conditions</Link>
                 </li>
               </ul>
             </div>

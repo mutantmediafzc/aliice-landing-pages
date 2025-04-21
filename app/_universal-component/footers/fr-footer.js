@@ -259,7 +259,7 @@ export default function FrFooter() {
               <li>
                 <Link
                   className="max-custom-md:!text-[10px] hover:!text-custom-yellow"
-                  href="#"
+                  href="/terms-and-conditions"
                 >
                   Privacy Policy
                 </Link>

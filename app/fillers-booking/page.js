@@ -78,7 +78,7 @@ export default function Home() {
             By clicking on &quot;Confirm&quot;, you are agreeing with the terms listed in
             our{" "}
             <span>
-              <Link href="#">privacy policy</Link>
+              <Link href="/terms-and-conditions">privacy policy</Link>
             </span>
           </>
         }
