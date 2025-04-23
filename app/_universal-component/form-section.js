@@ -324,7 +324,7 @@ export default function FormSection({
                           id="patient-checkbox"
                           name="patient-checkbox"
                         />
-                        <label htmlFor="patient-checkbox">
+                        <label htmlFor="patient-checkbox" style={{ marginLeft: "7px" }}>
                           Already a patient?
                         </label>
                       </div>
