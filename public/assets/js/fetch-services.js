@@ -34,7 +34,7 @@ async function populateCountriesDropDown() {
 			option.value = item.code;
 			option.textContent = item.name;
 
-			if (item.code === 'AE') {
+			if (item.code === 'CH') {
 				option.selected = true;
 			}
 
