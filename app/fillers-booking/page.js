@@ -5,6 +5,7 @@ import EnFooter from "../_universal-component/footers/en-footer";
 import FormSection from "../_universal-component/form-section";
 import Header from "../_universal-component/header";
 import HeroSection from "../_universal-component/hero-section";
+import CookieConsent from "../_universal-component/cookie-consent";
 
 export default function Home() {
   return (
@@ -111,6 +112,7 @@ export default function Home() {
         callText="Or call us on the following number:"
         greetings="We would be happy to welcome you at Aesthetics Clinic!"
       />
+      <CookieConsent />
       <EnFooter />
     </>
   );

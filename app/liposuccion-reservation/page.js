@@ -5,6 +5,7 @@ import FrFooter from "../_universal-component/footers/fr-footer";
 import FormSection from "../_universal-component/form-section";
 import Header from "../_universal-component/header";
 import HeroSection from "../_universal-component/hero-section";
+import CookieConsent from "../_universal-component/cookie-consent";
 
 export default function Home() {
   return (
@@ -106,6 +107,7 @@ export default function Home() {
           </>
         }
       />
+      <CookieConsent />
       <FrFooter />
     </>
   );

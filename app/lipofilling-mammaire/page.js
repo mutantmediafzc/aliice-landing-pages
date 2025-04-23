@@ -9,6 +9,7 @@ import HowToBookSection from "./_components/how-to-book-section";
 import SwiperSection from "./_components/swiper-section";
 import Script from "next/script";
 import ContactSection from "../_universal-component/contact-section";
+import CookieConsent from "../_universal-component/cookie-consent";
 
 export default function Home() {
   return (
@@ -125,6 +126,7 @@ export default function Home() {
           </>
         }
       />
+      <CookieConsent />
       <FrFooter />
       <Script
         src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"

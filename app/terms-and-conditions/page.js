@@ -1,5 +1,6 @@
 import EnFooter from "../_universal-component/footers/en-footer";
 import Header from "../_universal-component/header";
+import CookieConsent from "../_universal-component/cookie-consent";
 
 export default function Home() {
   return (
@@ -251,6 +252,7 @@ export default function Home() {
                 </p>
             </div>
       </div>
+      <CookieConsent />
       <EnFooter />
     </>
   );
